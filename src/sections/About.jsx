@@ -15,14 +15,13 @@ export default function About() {
         <div className={styles.left}>
           <div className={styles.story}>
             <span className={styles.tag}>ABOUT ME</span>
-            <h2 className={styles.heading}>I AM A Digital Product Designer</h2>
+            <h2 className={styles.heading}>I AM A UI/UX Designer</h2>
             <div className={styles.paras}>
               <p>
                 "I'm Zaldy, a Computer Engineering student with a strong passion for UI/UX design and front-end development. Still actively learning and experimenting with machine learning to build more helpful and visually engaging digital applications."
               </p>
               <p>
-                &quot;I like practicing my design and coding skills on small projects, 
-                while continuously learning new tools and AI technology along the way.&quot;
+                &quot; Actively honing my skills in UI/UX and graphic design through personal projects, while continuously adapting to new design tools and AI technology integration.&quot;
               </p>
             </div>
             <div className={styles.locationRow}>

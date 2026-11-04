@@ -67,7 +67,7 @@ export default function Hero() {
               VIEW PROJECTS <FaArrowRight size={12} />
             </a>
             <a href={siteData.hireLink} className={`${styles.btn} ${styles.btnYellow}`}>
-              HIRE ME <FaBolt size={12} />
+              let's chat <FaBolt size={12} />
             </a>
           </div>
         </div>

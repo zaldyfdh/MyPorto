@@ -20,7 +20,8 @@
 .top {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  /* Sisi kanan sejajar dengan tombol di navbar (padding konten yang sama) */
+  right: max(var(--pad), calc((100% - var(--max)) / 2 + var(--pad)));
   z-index: 40;
   width: 48px;
   height: 48px;
@@ -46,17 +47,21 @@
   .footer { margin-top: 40px; }
   .inner { flex-direction: column; align-items: flex-start; }
   .right { align-items: flex-start; }
-  .top { right: 12px; bottom: 12px; width: 40px; height: 40px; box-shadow: 3px 3px 0 var(--line); }
+  .top { bottom: 16px; }
 }
 
 /* ---------- Tombol interaktif: warna berubah, miring, terangkat ---------- */
 .top { transition: transform 0.22s cubic-bezier(0.3, 1.4, 0.5, 1), background-color 0.2s ease, color 0.2s ease, box-shadow 0.22s ease; }
 @media (hover: hover) {
-  .top:hover { transform: translateY(-3px) rotate(-3deg); box-shadow: 6px 6px 0 var(--line); }
+  .top:hover { background: var(--cyan); color: #000; transform: translateY(-3px) rotate(-3deg); box-shadow: 6px 6px 0 var(--line); }
 }
-.top:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--line); }
+.top:active { background: var(--cyan); color: #000; transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--line); }
 
 .icons a { display: inline-flex; transition: transform 0.22s cubic-bezier(0.3, 1.4, 0.5, 1); }
 @media (hover: hover) {
   .icons a:hover { transform: translateY(-3px) rotate(-8deg) scale(1.15); }
+}
+
+@media (max-width: 480px) {
+  .top { width: 44px; height: 44px; }
 }

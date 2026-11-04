@@ -43,7 +43,6 @@ export default function Navbar() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <a href="#top" className={styles.logo} onClick={() => setOpen(false)}>
-          <span className={styles.logoMark}>{siteData.initials}</span>
           <span className={styles.logoText}>
             <span className={styles.brand}>{siteData.brand}</span>
             <span className={styles.role}>{siteData.role}</span>
@@ -64,9 +63,6 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href={siteData.hireLink} className={`${styles.cta} ${styles.ctaInMenu}`} onClick={() => setOpen(false)}>
-            LET&apos;S TALK <FaBolt size={12} />
-          </a>
         </nav>
 
         <div className={styles.actions}>
@@ -80,9 +76,6 @@ export default function Navbar() {
           >
             <FaBolt size={20} />
           </button>
-          <a href={siteData.hireLink} className={styles.cta}>
-            LET&apos;S TALK <FaBolt size={12} />
-          </a>
         </div>
 
         <button

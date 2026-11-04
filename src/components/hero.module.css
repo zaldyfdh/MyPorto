@@ -29,6 +29,10 @@
 
 .dots { display: flex; gap: 8px; }
 .dots span { width: 14px; height: 14px; border-radius: 50%; border: 1px solid var(--line); }
+.dots span { animation: light 3s linear infinite; }
+.dots span:nth-child(1) { --glow: #ef4444; animation-delay: 0s; }
+.dots span:nth-child(2) { --glow: #facc15; animation-delay: 1s; }
+.dots span:nth-child(3) { --glow: #22c55e; animation-delay: 2s; }
 .code { font-family: var(--font-mono); font-weight: 700; font-size: 12px; color: #facc15; }
 
 .photoWrap { position: relative; background: #030712; padding: 8px; }
@@ -93,6 +97,24 @@
 }
 
 .readyDot { width: 8px; height: 8px; border-radius: 50%; background: #10b981; border: 1px solid var(--line); }
+.readyDot { animation: pulse 1.6s ease-out infinite; }
+
+/* Lampu lalu lintas: menyala bergantian merah → kuning → hijau, lalu ulang */
+@keyframes light {
+  0%, 30% { opacity: 1; box-shadow: 0 0 8px 2px var(--glow); }
+  36%, 100% { opacity: 0.22; box-shadow: none; }
+}
+
+/* Titik hijau berdenyut: cincin cahaya melebar lalu hilang */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.75); }
+  70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dots span, .readyDot { animation: none; }
+}
 
 .title {
   font-weight: 700;
@@ -191,8 +213,8 @@
 .btnRed { transition: transform 0.22s cubic-bezier(0.3, 1.4, 0.5, 1), background-color 0.2s ease, color 0.2s ease, box-shadow 0.22s ease; }
 .btnYellow { transition: transform 0.22s cubic-bezier(0.3, 1.4, 0.5, 1), background-color 0.2s ease, color 0.2s ease, box-shadow 0.22s ease; }
 @media (hover: hover) {
-  .btnRed:hover { transform: translateY(-3px) rotate(-2deg); box-shadow: 6px 6px 0 var(--line); }
-  .btnYellow:hover { transform: translateY(-3px) rotate(2deg); box-shadow: 6px 6px 0 var(--line); }
+  .btnRed:hover { background: #2563eb; color: #fff; transform: translateY(-3px) rotate(-2deg); box-shadow: 6px 6px 0 var(--line); }
+  .btnYellow:hover { background: var(--cyan); color: #000; transform: translateY(-3px) rotate(2deg); box-shadow: 6px 6px 0 var(--line); }
 }
-.btnRed:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--line); }
-.btnYellow:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--line); }
+.btnRed:active { background: #2563eb; color: #fff; transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--line); }
+.btnYellow:active { background: var(--cyan); color: #000; transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--line); }

@@ -63,7 +63,7 @@ export default function Connect() {
                 </p>
                 <a href={gmailLink} target="_blank" rel="noopener noreferrer" className={styles.callout}>
                   <span className={styles.calloutText}>
-                    <FaBolt size={13} /> HIRE ME TO UNLOCK MY POTENTIAL
+                    <FaBolt size={13} /> Let’s talk about the next project.
                   </span>
                   <span aria-hidden="true">➔</span>
                 </a>
