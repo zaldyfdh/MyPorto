@@ -14,8 +14,12 @@ const MicrosoftLogo = () => (
 );
 
 // Canva & Affinity tidak tersedia di react-icons → dibuat sebagai logo teks sederhana
-const CanvaLogo = () => <span className={styles.canva} aria-hidden="true">C</span>;
-const AffinityLogo = () => <span className={styles.affinity} aria-hidden="true">a</span>;
+const CanvaLogo = () => (
+  <img src="/images/skills/canva.png" alt="" className={`${styles.logoImg} ${styles.logoCanva}`} loading="lazy" />
+);
+const AffinityLogo = () => (
+  <img src="/images/skills/affinity.png" alt="" className={styles.logoImg} loading="lazy" />
+);
 
 const icons = {
   react: <FaReact size={24} color="#00b8d4" />,

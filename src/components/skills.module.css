@@ -90,29 +90,7 @@
   .grid { grid-template-columns: 1fr; }
 }
 
-.canva {
-  width: 22px;
-  height: 22px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #00c4cc;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1;
-  color: #fff;
-}
 
-.affinity {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-style: italic;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1;
-  color: #111;
-}
 
 /* ---------- Tombol interaktif: warna berubah, miring, terangkat ---------- */
 .filter:not(.filterActive) { transition: transform 0.22s cubic-bezier(0.3, 1.4, 0.5, 1), background-color 0.2s ease, color 0.2s ease, box-shadow 0.22s ease; }
@@ -125,3 +103,7 @@
   .filterActive:hover { transform: translateY(-3px) rotate(2deg); box-shadow: 4px 4px 0 var(--line); }
 }
 .filterActive { transition: transform 0.22s cubic-bezier(0.3, 1.4, 0.5, 1), box-shadow 0.22s ease; }
+
+/* Logo asli Canva & Affinity (gambar di public/images/skills/) */
+.logoImg { display: block; width: 100%; height: 100%; object-fit: contain; }
+.logoCanva { width: 80%; height: 80%; }
